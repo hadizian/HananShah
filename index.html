@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hanan Shah – Official Website</title>
+  <link rel="icon" href="images/logo.jpg" type="image/x-icon" />
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Optional: fade-in animations */
+    .fade-in {
+      animation: fadeIn 1.2s ease-in forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bebas+Neue&family=Bubblegum+Sans&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Exo:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Mouse+Memoirs&family=Oswald:wght@200..700&family=Unbounded:wght@200..900&display=swap">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,700&display=swap" rel="stylesheet">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+
+<body class="bg-black text-white">
+
+  <!-- Hero Section -->
+  <section class="swiper mySwiper h-screen w-full">
+    <!-- Navbar -->
+    <nav class="absolute top-1  w-full z-20 flex py-4 px-6">
+      <!-- Hamburger Icon -->
+      <div class="fixed top-4 left-4 z-50">
+        <button id="menu-toggle" class="text-white focus:outline-none">
+          <div class="space-y-1">
+            <span class="block md: w-7 h-0.5 bg-white"></span>
+            <span class="block md: w-7 h-0.5 bg-white"></span>
+            <span class="block md: w-7 h-0.5 bg-white"></span>
+          </div>
+        </button>
+      </div>
+
+      <!-- Fullscreen Sliding Menu -->
+       <div class="md:">
+      <div id="mobile-fullscreen-menu"
+        class="fixed inset-0 z-40 bg-black bg-opacity-90 md:inset-y-0 md:left-0 md:w-1/4 md:h-full md:bg-transparent md:bg-opacity-100 hidden"
+        style="font-family: 'Oswald', sans-serif;">
+        <div id="menu-content"
+          class="h-full w-full max-w-md bg-black text-white transform -translate-x-full opacity-0 transition-all duration-1000 ease-in-out flex flex-col justify-center items-center text-2xl space-y-6">
+        
+          <div class="flex w-full max-w-6xl items-center justify-center  text-white text-sm font-medium">
+        
+        
+            <div class="mx-4 ">
+              <img src="images/logo.jpg" alt="Logo" class="rounded-sm opacity-85 h-8 w-auto" />
+            </div>
+        
+          </div>
+          <a href="#home-section" class="menu-link hover:text-gray-300">Home</a>
+          <a href="#about-section" class="menu-link hover:text-gray-300">About</a>
+          <a href="#timeline-section" class="menu-link hover:text-gray-300">Journey</a>
+          <a href="#music" class="menu-link hover:text-gray-300">Tracks</a>
+          <a href="#Team" class="menu-link hover:text-gray-300">The Team</a>
+            <div class="absolute bottom-6 w-full flex flex-col items-center z-10 leading-none">
+            <p class="text-white text-lg md:text-xl mb-2 ">Join Us</p>
+            <div class="flex gap-3 items-center" style="width: 1; height: 1;">
+              <a href="https://www.instagram.com/hanaaaneyy/" class="hover:text-white transition"><i class="fab fa-instagram"></i></a>
+              <a href="https://open.spotify.com/artist/5WGX9SJLY7TCqRUJcfcaYi?si=dfFku2zDRjKg-c36xeedLQ" class="hover:text-white transition"><i class="fab fa-spotify"></i></a>
+              <a href="https://youtube.com/@hananshaah?si=g2GkcNTxELKrWRwP" class="hover:text-white transition"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          </div>
+          </div>
+
+
+    </nav>
+
+<!--
+ DESKTOP MENU BUTTON (only on desktop) 
+<div class="hidden md:block fixed top-6 left-6 z-[9999]" id="desktop-menu-wrapper">
+  <button id="desktop-menu-btn"
+    class="text-white font-bold tracking-wide text-xl cursor-pointer"
+    style="font-family: 'Oswald', sans-serif;">
+    MENU
+  </button>
+
+
+   Dropdown 
+  <div id="desktop-dropdown"
+    class="absolute left-0 mt-2 bg-black bg-opacity-90 rounded-lg shadow-lg px-6 py-4 flex flex-col gap-3 text-white text-lg opacity-0 pointer-events-none transform -translate-y-3 transition-all duration-300 ease-out">
+    <a href="#about" class="hover:text-gray-300 transition">About</a>
+    <a href="#timeline" class="hover:text-gray-300 transition">Timeline</a>
+    <a href="#music" class="hover:text-gray-300 transition">Music</a>
+    <a href="#contact" class="hover:text-gray-300 transition">Contact</a>
+  </div>
+</div>
+
+
+<!-- Center Logo  <div class="flex w-full max-w-6xl items-center justify-between text-white text-sm font-medium">
+
+    
+    <div class="mx-4">
+      <img src="images/logo.jpg" 
+      alt="Logo" class="h-8 w-auto" />
+    </div>
+  
+  </div> -->
+
+
+    <div id="home-section" class="swiper-wrapper">
+
+      <!-- Slide 1 -->
+      <div class="swiper-slide h-screen w-full bg-cover bg-center 
+     bg-[url('images/introPTR3.jpg')] md:bg-[url('images/introLND5.jpg')]">
+        <div class="absolute inset-0 bg-black/60"></div>
+        <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
+          <h1 id="hanan-fade-text" class="text-6xl md:text-8xl opacity-0 opacity-100 transition-opacity duration-1000 fade-in" style="font-family: 'Oswald', sans-serif;">Hanan Shah</h1>
+          <p class="text-xl md:text-2xl mt-2 text-gray-300 fade-in delay-100">Welcomes You All</p>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="swiper-slide h-screen w-full bg-cover bg-center 
+     bg-[url('images/introPTR.jpg')] md:bg-[url('images/introLND6.jpg')]">
+        <div class="absolute inset-0 bg-black/60"></div>
+        <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
+          <h1 class="text-6xl md:text-8xl fade-in" style="font-family: 'Oswald', sans-serif;">Hanan Shah</h1>
+          <p class="text-xl md:text-2xl mt-2 text-gray-300 fade-in delay-100">Welcomes You All</p>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="swiper-slide h-screen w-full bg-cover bg-center 
+     bg-[url('images/introPTR2.jpg')] md:bg-[url('images/introLND3.jpg')]">
+        <div class="absolute inset-0 bg-black/60"></div>
+        <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
+          <h1 class="text-6xl md:text-8xl fade-in" style="font-family: 'Oswald', sans-serif;">Hanan Shah</h1>
+          <p class="text-xl md:text-2xl mt-2 text-gray-300 fade-in delay-100">Welcomes You All</p>
+        </div>
+      </div>
+
+      <div class="swiper-slide h-screen w-full bg-cover bg-center 
+     bg-[url('images/introPTR1.jpg')] md:bg-[url('images/introLND.jpg')]">
+        <div class="absolute inset-0 bg-black/60"></div>
+        <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
+          <h1 class="text-6xl md:text-8xl fade-in" style="font-family: 'Oswald', sans-serif;">Hanan Shah</h1>
+          <p class="text-xl md:text-2xl mt-2 text-gray-300 fade-in delay-100">Welcomes You All</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="about-section" class="text-white px-6 py-20 fade-in">
+    <h1 id="about-text"
+      class="text-[4rem] sm:text-[5rem] md:text-[6rem] lg:text-[8rem] font-bold text-center text-[#FFFFFF] mt-0px mb-16 transition-transform duration-300 hover:scale-110"
+      style="font-family: 'Oswald', serif;">
+      About
+    </h1>
+
+
+
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+    
+<!-- Swiper Container (Image Carousel) -->
+<div class="swiper mySwiper w-full max-w-xs fade-in delay-100">
+  <div class="swiper-wrapper">
+    <!-- Slide 1 -->
+    <div class="swiper-slide">
+      <img src="images/PTR1.jpg" alt="Hanan Shah" class="rounded-xl shadow-xl w-full" />
+    </div>
+    <!-- Slide 2 -->
+    <div class="swiper-slide">
+      <img src="images/PTR2.jpg" alt="Hanan Shah 2" class="rounded-xl shadow-xl w-full" />
+    </div>
+    <!-- Slide 3 -->
+    <div class="swiper-slide">
+      <img src="images/PTR3.jpg" alt="Hanan Shah 3" class="rounded-xl shadow-xl w-full" />
+    </div>
+    <!-- Add more slides as needed -->
+    <div class="swiper-slide">
+      <img src="images/PTR4.jpg" alt="Hanan Shah 3" class="rounded-xl shadow-xl w-full" />
+    </div>
+    <div class="swiper-slide">
+      <img src="images/PTR5.jpg" alt="Hanan Shah 3" class="rounded-xl shadow-xl w-full" />
+    </div>
+  </div>
+</div>
+
+    
+      <!-- Text Content -->
+      <div class="fade-in delay-300">
+    
+        <h2 class="text-[2rem] sm:text-[2rem] md:text-[3rem] lg:text-[4rem] font-bold mb-4"
+          style="font-family: 'Exo 2', sans-serif;">
+          Hanan Shah
+        </h2>
+        <p class="text-base md:text-lg text-gray-400 leading-relaxed" style="font-family: 'Oswald', sans-serif;">
+          Hanan Shah is an independent singer and performer from Kerala, India, known for his soulful voice and raw
+          emotional
+          depth. Blending Malayalam roots with global influences, Hanan’s music bridges cultures and feelings — from
+          heartfelt
+          ballads to electrifying experimental sounds.
+    
+          Driven by passion and authenticity, he has grown a loyal audience through self-produced tracks, creative visuals,
+          and a
+          unique vibe that defies trends. Whether he’s singing about love, identity, or life’s quiet moments, Hanan delivers
+          music
+          that feels personal and powerful.
+          Currently building his catalog across platforms like Spotify, YouTube, and Instagram, Hanan Shah is not just a
+          voice —
+          he’s a movement in the making.
+    
+    
+        </p>
+    
+      </div>
+    </div>
+    </section>
+
+<section id="timeline-section" x-data="timeline()" class="min-h-screen gradient-bg text-black">
+  
+  <!-- Heading -->
+  <div class="text-center pt-12">
+    <h1 id="timeline-text"
+      class="text-[4rem] sm:text-6xl md:text-8xl lg:text-10xl xl:text-11xl font-bold text-white mb-16 transition-transform duration-300 hover:scale-110"
+      style="font-family: 'Oswald', serif;">
+      JOURNEY
+    </h1>
+  </div>
+
+  <!-- Flex Layout for Timeline -->
+  <div class="flex flex-col md:flex-row">
+    <!-- Sidebar Years -->
+    <div class="w-full md:w-28 py-8 pl-6 flex md:flex-col gap-8 text-gray-400 text-md font-semibold tracking-wide overflow-x-auto md:overflow-visible">
+      <template x-for="year in years" :key="year">
+        <button @click="selectYear(year)"
+          :class="selectedYear === year ? 'text-[#5F4B8B] font-bold' : 'hover:text-black transition'" 
+          x-text="year">
+        </button>
+      </template>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-1 flex items-center justify-center px-6 md:px-16 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-6xl w-full">
+
+        <!-- Left Text -->
+        <div x-show="visible" x-transition.opacity>
+          <h2 class="text-[4rem] sm:text-[5rem] md:text-[5rem] leading-tight mb-4 font-sans text-[#CBBBF6]"  style="font-family: 'Mouse Memoirs', serif;">
+            <span x-text="content[selectedYear].titleLine1"></span> <br>
+            <span x-text="content[selectedYear].titleLine2"></span>
+          </h2>
+          <h3 style="color: #f0eaff;" class="text-[5rem] sm:text-[5rem] md:text-[6rem] lg:text-[8rem] font-extrabold leading-none" x-text="selectedYear"></h3>
+        </div>
+
+        <!-- Right Image + Label -->
+        <div style="font-family: Barlow Condensed;" x-show="visible" x-transition.opacity class="relative">
+          <img :src="content[selectedYear].image" alt="Office" class="rounded-lg shadow-lg w-full object-cover">
+          <p class="text-[1em] sm:text-[1.5em] text-[#e6fcff] mt-2" x-text="content[selectedYear].caption"></p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="music" class="bg-[#1e1b4b] text-white py-20 px-6 md:px-16">
+
+    <div class="text-center pt-12">
+    <h1 id="timeline-text"
+      class="text-[4rem] sm:text-6xl md:text-8xl lg:text-10xl xl:text-11xl font-bold text-white mb-16 transition-transform duration-300 hover:scale-110"
+      style="font-family: 'Oswald', serif;">
+      TRACKS
+    </h1>
+  </div>
+
+  <!-- Featured Latest Track -->
+  <div class="mb-24">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <!-- Image -->
+      <div>
+        <img src="images/imgsn2.jpg" alt="Latest Track" class="rounded-xl shadow-lg w-full object-cover">
+      </div>
+
+      <!-- Info + Button -->
+      <div style="font-family: Oswald;" class="text-left">
+        <h2 class="text-4xl sm:text-5xl font-bold mb-4 text-[#CBBBF6]">Latest Release</h2>
+        <h3 class="text-2xl sm:text-3xl font-semibold mb-2">Chirapunji</h3>
+        <p class="text-sm text-gray-300 mb-6">Hanan Shah, Nihal Sadiq •</p>
+        <a href="https://open.spotify.com/track/3NncVbpKJ91HPpI5TUIugV?si=88e1815e371c42e7" target="_blank" class="inline-block bg-[#5F4B8B] hover:bg-[#443366] text-white px-6 py-3 rounded-full shadow-lg font-semibold transition-transform hover:scale-105">
+          Listen on Spotify
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Other Tracks Grid -->
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-[2rem] sm:text-[4rem] font-bold text-center mb-12 text-[#5F4B8B]">Other Tracks</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+      <!-- Repeat this block for each track -->
+      <div class="bg-[#1e1b4b] p-4 rounded-xl shadow-lg hover:scale-105 transition-transform">
+        <img src="images/imgsn3.JPG" alt="Track Cover" class="rounded-md mb-4 w-full">
+        <h4 class="text-lg font-semibold">Insaanile</h4>
+        <p class="text-sm text-gray-300 mb-4">Hanan shah, Jubair Muhammed, Suhail Sulthan •</p>
+        <a href="https://open.spotify.com/track/1kl8HxZrfUluGnW5rorqzC?si=b44e9ed69ca54e5e" target="_blank" class="inline-block bg-[#CBBBF6] hover:bg-[#b0a7dc] text-[#1e1b4b] px-4 py-2 rounded-full font-medium transition-transform hover:scale-105">
+          Stream Now
+        </a>
+      </div>
+     
+            <div class="bg-[#1e1b4b] p-4 rounded-xl shadow-lg hover:scale-105 transition-transform">
+        <img src="images/imgsn4.JPG" alt="Track Cover" class="rounded-md mb-4 w-full">
+        <h4 class="text-lg font-semibold">Kasavinal</h4>
+        <p class="text-sm text-gray-300 mb-4">Hanan shah, Jubair Muhammed •</p>
+        <a href="https://open.spotify.com/track/0fzIiQPOjv8kcSLCYTUSf3?si=de010351f3c84992" target="_blank" class="inline-block bg-[#CBBBF6] hover:bg-[#b0a7dc] text-[#1e1b4b] px-4 py-2 rounded-full font-medium transition-transform hover:scale-105">
+          Stream Now
+        </a>
+      </div>
+
+       <div class="bg-[#1e1b4b] p-4 rounded-xl shadow-lg hover:scale-105 transition-transform">
+        <img src="images/imgsn5.JPG" alt="Track Cover" class="rounded-md mb-4 w-full">
+        <h4 class="text-lg font-semibold">Akame</h4>
+        <p class="text-sm text-gray-300 mb-4">Hanan shah, Jubair Muhammed, Muthu</p>
+        <a href="https://open.spotify.com/track/1SYEp0TdbqLzNos5jEFDUv?si=0acdd4b78e4641c3" target="_blank" class="inline-block bg-[#CBBBF6] hover:bg-[#b0a7dc] text-[#1e1b4b] px-4 py-2 rounded-full font-medium transition-transform hover:scale-105">
+          Stream Now
+        </a>
+      </div>
+
+
+    </div>
+          <!-- Stream All Button -->
+<div class="text-center  mt-16">
+  <a href="https://open.spotify.com" target="_blank"
+     class="inline-block bg-[#1DB954] hover:bg-[#006400] text-white px-8 py-4 rounded-full shadow-lg text-lg font-semibold transition-transform hover:scale-105">
+    Stream All on Spotify
+  </a>
+</div>
+
+  </div>
+</section>
+
+  <section id="about-section" class="text-white px-6 py-20 fade-in">
+    <h1 id="about-text"
+      class="text-[4rem] sm:text-[5rem] md:text-[6rem] lg:text-[8rem] font-bold text-center text-[#FFFFFF] mt-0px mb-16 transition-transform duration-300 hover:scale-110"
+      style="font-family: 'Oswald', serif;">
+      The Team
+    </h1>
+  <div id="Team" class="mb-24">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12 items-center">
+      <!-- Image -->
+      <div class="hover:scale-105 transition-transform">
+        <img src="images/tm (3).jpg" alt="Latest Track" class="rounded-xl shadow-lg w-full object-cover">
+      </div>
+      <div class="hover:scale-105 transition-transform">
+        <img src="images/tm (5).jpg" alt="Latest Track" class="rounded-xl shadow-lg w-full object-cover">
+      </div>
+      <div class="hover:scale-105 transition-transform">
+        <img src="images/tm (4).jpg" alt="Latest Track" class="rounded-xl shadow-lg w-full object-cover">
+      </div>
+      <div class="hover:scale-105 transition-transform">
+        <img src="images/tm (1).jpg" alt="Latest Track" class="rounded-xl shadow-lg w-full object-cover">
+      </div>
+      <div class="hover:scale-105 transition-transform">
+        <img src="images/tm (7).jpg" alt="Latest Track" class="rounded-xl shadow-lg w-full object-cover">
+      </div>
+      <div class="hover:scale-105 transition-transform">
+        <img src="images/tm (8).jpg" alt="Latest Track" class="rounded-xl shadow-lg w-full object-cover">
+      </div>
+      <div class="hover:scale-105 transition-transform">
+        <img src="images/tm (9).jpg" alt="Latest Track" class="rounded-xl shadow-lg w-full object-cover">
+      </div>
+      <div class="hover:scale-105 transition-transform">
+        <img src="images/tm (2).jpg" alt="Latest Track" class="rounded-xl shadow-lg w-full object-cover">
+      </div>
+      <div class="hover:scale-105 transition-transform">
+        <img src="images/tm (6).jpg" alt="Latest Track" class="rounded-xl shadow-lg w-full object-cover">
+      </div>
+      
+
+    </div>
+  </div>
+    <h1 id="about-text"
+      class="text-[2rem] sm:text-[3rem] md:text-[4rem] lg:text-[5rem] font-bold text-center text-[#FFFFFF] mt-0px mb-16 transition-transform duration-300 hover:scale-110"
+      style="font-family: 'Oswald', serif;">
+      Thank You For The Visit
+    </h1>
+    </section>
+
+<footer class="bg-[#0f172a] text-gray-400 py-12 px-6 rounded-t-2xl">
+  <!-- Top Links -->
+    <div class="flex flex-wrap justify-center gap-6 mb-6 text-sm font-medium">
+    <a href="#home-section" class="hover:text-white transition">Home</a>
+    <a href="#about-section" class="hover:text-white transition">About</a>
+    <a href="#timeline-section" class="hover:text-white transition">Journey</a>
+    <a href="#music" class="hover:text-white transition">Tracks</a>
+        <a href="#Team" class="hover:text-white transition">The Team</a>
+  </div>
+
+  <!-- Social Icons -->
+  <div class="flex justify-center gap-6 mb-6 text-xl">
+    <a href="https://www.instagram.com/hanaaaneyy/" class="hover:text-white transition"><i class="fab fa-instagram"></i></a>
+    <a href="https://open.spotify.com/artist/5WGX9SJLY7TCqRUJcfcaYi?si=dfFku2zDRjKg-c36xeedLQ" class="hover:text-white transition"><i class="fab fa-spotify"></i></a>
+    <a href="https://youtube.com/@hananshaah?si=g2GkcNTxELKrWRwP" class="hover:text-white transition"><i class="fab fa-youtube"></i></a>
+  </div>
+
+  <!-- Bottom Text -->
+  <p class="text-center text-xs text-gray-500">
+    © 2025 hananshah, All rights reserved.
+  </p>
+</footer>
+
+
+</body>
+
+</html>
+
+
+
+
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init();</script>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
+
+<script>
+  const toggleBtn = document.getElementById("menu-toggle");
+  const fullscreenMenu = document.getElementById("mobile-fullscreen-menu");
+  const menuContent = document.getElementById("menu-content");
+  const menuLinks = document.querySelectorAll(".menu-link");
+
+  let menuOpen = false;
+
+  function openMenu() {
+    fullscreenMenu.classList.remove("hidden");
+    setTimeout(() => {
+      menuContent.classList.remove("-translate-x-full", "opacity-0");
+      menuContent.classList.add("translate-x-0", "opacity-100");
+    }, 10);
+    menuOpen = true;
+  }
+
+  function closeMenu() {
+    menuContent.classList.add("-translate-x-full", "opacity-0");
+    menuContent.classList.remove("translate-x-0", "opacity-100");
+    setTimeout(() => {
+      fullscreenMenu.classList.add("hidden");
+    }, 500);
+    menuOpen = false;
+  }
+
+  // Toggle when hamburger icon is clicked
+  toggleBtn.addEventListener("click", () => {
+    if (menuOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  // Close menu on any link click
+  menuLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      if (menuOpen) {
+        closeMenu();
+      }
+    });
+  });
+</script>
+
+<script>
+  const menuBtn = document.getElementById("desktop-menu-btn");
+  const dropdown = document.getElementById("desktop-dropdown");
+
+  let open = false;
+
+  menuBtn.addEventListener("click", () => {
+    open = !open;
+    dropdown.classList.toggle("opacity-0", !open);
+    dropdown.classList.toggle("pointer-events-none", !open);
+    dropdown.classList.toggle("-translate-y-3", !open);
+  });
+
+  // Close when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!document.getElementById("desktop-menu-wrapper").contains(e.target)) {
+      dropdown.classList.add("opacity-0", "pointer-events-none", "-translate-y-3");
+      open = false;
+    }
+  });
+</script>
+
+<script>
+  function timeline() {
+    return {
+      years: [2000, 2020, 2022, 2025],
+      selectedYear: 2000,
+      visible: true,
+      content: {
+        2000: {
+          titleLine1: "The",
+          titleLine2: "Gift of god.",
+          image: "images/img1.jpg",
+          caption: "The Birth of The Legend (september 12)"
+        },
+        2020: {
+          titleLine1: "INTO",
+          titleLine2: "Sociol Media.",
+          image: "images/img2.jpg",
+          caption: "Stepped into Sociol media, Released first official single “Musthafa” on streaming platforms."
+        },
+          2022: {
+          titleLine1: "The",
+          titleLine2: "Turning Point.",
+          image: "images/img3.jpg",
+          caption: "Viral breakthrough with The cover of “Parayathe Ariyathe”."
+        },
+          2025: {
+          titleLine1: "In The",
+          titleLine2: "Peoples Heart.",
+          image: "images/img4.jpg",
+          caption: "Hanan Was The favourite Of Most Of The peole's Heart"
+        }
+        // Add other years later...
+      },
+      selectYear(year) {
+        this.visible = false;
+        setTimeout(() => {
+          this.selectedYear = year;
+          this.visible = true;
+        }, 300); // Delay for fade-out and in
+      }
+    }
+  }
+</script>
+
+</body>
+
+</html>
